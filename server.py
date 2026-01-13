@@ -88,7 +88,8 @@ def predict_router(model_name):
     except Exception as e:
         # 捕获异常也返回英文给前端
         return jsonify({'error': str(e)}), 500
+    
+load_models() 
 
 if __name__ == '__main__':
-    load_models() 
     app.run(host='0.0.0.0', port=5000, debug=True)
